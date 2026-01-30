@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  /* background: #2d3250; */
+  background: #9b5a27;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+}
+
+.logo a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  /* color: #cfd3ff; */
+  color: #fff;
+  text-decoration: none;
+  transform: color 0.3 ease;
+}
+
+.nav-links a:hover {
+  color: #13193a;
+}
+
+.nav-right input {
+  background: #424769;
+  border: none;
+  padding: 6px 10px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.nav-right button {
+  margin-left: 8px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-right button a{
+  text-decoration: none;
+  color: black;
+}
+
+.nav-right button:hover{
+  background-color: #424769;
+}
+
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ======Hamburger====== */
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #424769;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 22px;
+    cursor: pointer;
+  }
+}

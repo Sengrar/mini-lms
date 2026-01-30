@@ -1,0 +1,157 @@
+/* ====Theme==== */
+:root {
+  /* DARK THEME */
+  --hero-overlay: rgba(13, 20, 40, 0.85);
+  --text-color: #ffffff;
+  --bg-color: #0d1428;
+  --bg-box: rgba(255, 255, 255, 0.08);
+}
+
+body.light {
+  /* LIGHT THEME */
+  --hero-overlay: rgba(255, 255, 255, 0.75);
+  --text-color: #111;
+  --bg-color: #ffffff;
+  --bg-box: rgba(13, 20, 40, 0.153);
+}
+
+/* body {
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hero-section{
+    transition: background 0.4s ease;
+} */
+
+
+.home-section {
+  min-height: 100vh;
+  padding: 120px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* background image + overlay */
+  background:
+    linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+    url("/assets/images/hero-bg.jpg") center/cover no-repeat;
+
+  color: var(--text-color);
+  font-family: "Raleway", sans-serif;
+}
+
+
+/* Tag */
+.tag {
+  background: var(--bg-box);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Main Heading */
+.home-section h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+.learn {
+  font-size: 1.5rem;
+  /* color: #f9b17a; */
+  color: #9b5a27;
+  margin-bottom: 20px;
+}
+
+/* Paragraph */
+.home-section p {
+  max-width: 700px;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn-box {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 50px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.btn-box a{
+  text-decoration: none;
+}
+
+.btn-1,
+.btn-2 {
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-1 {
+  background: #ffffff;
+  /* font-size: 17px; */
+  
+}
+
+.btn-1 a{
+  color: #1a1a1a;
+  font-size: 17px;
+}
+
+
+
+.btn-2 {
+  background: #111429;
+  /* background: #424769; */
+  border: 1px solid #ffffffc5;
+}
+
+
+
+.btn-2 a{
+  color: #ffffff;
+  font-size: 16px;
+}
+
+
+.btn-box .btn-1:hover{
+  background: #9b5927;
+  /* color: #1a1a1a; */
+}
+
+.btn-box .btn-2:hover{
+  background: #9b5927;
+  /* color: #1a1a1a; */
+  border: 1px solid #494949c5;
+}
+
+/* Stats box */
+.facts {
+  background: var(--bg-box);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 20px 40px;
+}
+
+.facts table {
+  border-collapse: collapse;
+}
+
+.facts th {
+  font-size: 1.8rem;
+  padding: 0 25px;
+}
+
+.facts td {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}

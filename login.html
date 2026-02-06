@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,11 +11,15 @@
 
   <!-- Global CSS -->
   <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/navbar.css">
   <link rel="stylesheet" href="/css/auth.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Page Specific CSS -->
   <!-- <link rel="stylesheet" href="css/page.css"> -->
 </head>
+
 <body>
 
   <!-- Navbar -->
@@ -23,42 +28,44 @@
   </header>
 
   <!-- Main Content -->
-   <!-- login & signup-->
-  <div class="auth-container">
-  <h2>Welcome to LearnX</h2>
-  <p class="subtitle">Login to your account</p>
+  <!-- login & signup-->
+  <section class="page">
+    <div class="auth-container">
+      <h2>Welcome to LearnX</h2>
+      <p class="subtitle">Login to your account</p>
 
-  <!--  BUTTONS -->
-  <div class="social-btn"> Continue with Google</div>
-  <div class="social-btn">Continue with GitHub</div>
-  <div class="social-btn">Continue with Microsoft</div>
+      <!--  BUTTONS -->
+      <div class="social-btn"> Continue with Google</div>
+      <div class="social-btn">Continue with GitHub</div>
+      <div class="social-btn">Continue with Microsoft</div>
 
-  <div class="divider">or</div>
+      <div class="divider">or</div>
 
-  <!-- AUTH FORM -->
-  <form id="authForm">
+      <!-- AUTH FORM -->
+      <form id="authForm">
 
-    <!-- SIGNUP  -->
-    <div id="nameFields" style="display: none;">
-      <input type="text" id="firstName" placeholder="First Name" />
-      <input type="text" id="lastName" placeholder="Last Name" />
+        <!-- SIGNUP  -->
+        <div id="nameFields" style="display: none;">
+          <input type="text" id="firstName" placeholder="First Name" />
+          <input type="text" id="lastName" placeholder="Last Name" />
+        </div>
+
+        <input type="email" id="email" placeholder="Email" />
+
+        <div class="password-box">
+          <input type="password" id="password" placeholder="Password" />
+          <span id="togglePassword"></span>
+        </div>
+
+        <button type="submit">Continue</button>
+      </form>
+
+      <p class="switch">
+        Don’t have an account?
+        <span id="switchAuth">Sign up</span>
+      </p>
     </div>
-
-    <input type="email" id="email" placeholder="Email" />
-
-    <div class="password-box">
-      <input type="password" id="password" placeholder="Password" />
-      <span id="togglePassword"></span>
-    </div>
-
-    <button type="submit">Continue</button>
-  </form>
-
-  <p class="switch">
-    Don’t have an account?
-    <span id="switchAuth">Sign up</span>
-  </p>
-</div>
+  </section>
   <!-- Footer -->
   <footer id="footer">
     <!-- footer.html will be loaded here -->
@@ -67,9 +74,10 @@
   <!-- Global JS -->
   <script src="/js/main.js"></script>
   <script src="/js/auth.js"></script>
+  <script src="/js/navbar.js"></script>
 
   <!-- Page Specific JS -->
   <!-- <script src="js/page.js"></script> -->
 </body>
-</html>
 
+</html>

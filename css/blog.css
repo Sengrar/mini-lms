@@ -7,12 +7,14 @@
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  /* font-family: 'Segoe UI', sans-serif; */
 }
 
 body {
-  margin: 0;
+  /* margin: 0; */
   background: linear-gradient(180deg, #0b1020, #020617);
   color: var(--text-main);
 }
@@ -22,7 +24,7 @@ body {
   padding: 60px 20px;
 }
 
-.header p {
+.header-blog p {
   color: var(--text-muted);
 }
 
@@ -56,11 +58,20 @@ h2 {
 }
 
 
-ul {
+section ul {
   padding-left: 18px;
 }
 
-li {
+section li {
+  margin-bottom: 10px;
+  color: var(--text-muted);
+}
+
+.card ul {
+  padding-left: 18px;
+}
+
+.card li {
   margin-bottom: 10px;
   color: var(--text-muted);
 }
@@ -101,9 +112,9 @@ li {
   text-decoration: underline;
 }
 
-.footer {
+/* .footer {
   text-align: center;
   padding: 30px;
   color: var(--text-muted);
   font-size: 0.9rem;
-}
+} */

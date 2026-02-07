@@ -1,20 +1,20 @@
 /* Sidebar base */
 .sidebar {
   position: fixed;
-  left: -250px; /* hidden initially */
+  right: -250px; /* hidden initially */
   top: 0;
   width: 250px;
   height: 100%;
   background: #1e1e2f;
   color: #fff;
-  transition: left 0.3s ease;
+  transition: right 0.3s ease;
   padding-top: 20px;
   z-index: 1000;
 }
 
 /* Active sidebar */
 .sidebar.active {
-  left: 0;
+  right: 0;
 }
 
 /* Search box */
@@ -55,7 +55,7 @@
 #toggle-btn {
   position: fixed;
   top: 15px;
-  left: 15px;
+  right: 15px;
   font-size: 22px;
   background: #1e1e2f;
   color: #fff;

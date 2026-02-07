@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  /* background: #2d3250; */
+  background: #9b5a27;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+}
+
+.logo a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  /* color: #cfd3ff; */
+  color: #fff;
+  text-decoration: none;
+  transform: color 0.3 ease;
+}
+
+.nav-links a:hover {
+  color: #d7d7d7;
+}
+
+.nav-right input {
+  background: #434343;
+  border: none;
+  padding: 6px 10px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.nav-right button {
+  margin-left: 8px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-right button a{
+  text-decoration: none;
+  color: black;
+}
+
+.nav-right button:hover{
+  background-color: rgb(216, 214, 214);
+}
+
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ======Hamburger====== */
+
+@media (max-width: 912px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    right: 20px;
+    background: #424769;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    gap: 14px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+
+/* ====== RESPONSIVE NAVBAR ====== */
+
+@media (max-width: 768px) {
+  .nav {
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: #424769;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 16px;
+    z-index: 100;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-right {
+    display: none;
+    position: absolute;
+    top: 260px;
+    left: 0;
+    width: 100%;
+    background: #424769;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 0;
+    z-index: 99;
+  }
+
+  .nav-right.active {
+    display: flex;
+  }
+
+  .nav-right input {
+    width: 80%;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}

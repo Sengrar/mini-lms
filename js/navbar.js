@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ======Theme button=========
+
 // const themeButton = document.querySelector('.theme-btn');
 // const homesection = document.querySelector('.home-section');
 // const inText = '☀';
@@ -52,5 +53,6 @@ document.addEventListener("click", (e)=>{
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("hamburger")) {
     document.querySelector(".nav-links").classList.toggle("active");
+    document.querySelector(".nav-right").classList.toggle("active");
   }
 });

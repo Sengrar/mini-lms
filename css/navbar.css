@@ -38,6 +38,10 @@
   color: #d7d7d7;
 }
 
+.nav-box {
+  display: flex;
+}
+
 .nav-right input {
   background: #434343;
   border: none;
@@ -54,20 +58,21 @@
   cursor: pointer;
 }
 
-.nav-right button a{
+.nav-right button a {
   text-decoration: none;
   color: black;
 }
 
-.nav-right button:hover{
+.nav-right button:hover {
   background-color: rgb(216, 214, 214);
 }
 
 
 .hamburger {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
+  margin-left: 18px;
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /* ======Hamburger====== */
@@ -99,7 +104,7 @@
 
 /* ====== RESPONSIVE NAVBAR ====== */
 
-@media (max-width: 768px) {
+@media (max-width: 568px) {
   .nav {
     position: relative;
   }

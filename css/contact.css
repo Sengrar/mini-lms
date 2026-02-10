@@ -93,7 +93,7 @@ body {
 }
 
 .contact-right button {
-  background: #38bdf8;
+  background: #9b5a27;
   color: #020617;
   border: none;
   padding: 12px;
@@ -104,7 +104,7 @@ body {
 }
 
 .contact-right button:hover {
-  background: #0ea5e9;
+  background: #a56737;
 }
 
 /* SUCCESS MESSAGE */

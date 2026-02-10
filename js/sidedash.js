@@ -1,11 +1,19 @@
 // Toggle sidebar
-const toggleBtn = document.getElementById("toggle-btn");
+const toggleBtn = document.querySelector('.hamburger');
 const sidebar = document.getElementById("sidebar");
 const closeBtn = document.querySelector('.closeBtn');
 
-toggleBtn.addEventListener("click", () => {
-  sidebar.classList.toggle("active");
-  toggleBtn.style.display = "none"
+// toggleBtn.addEventListener("click", () => {
+//   sidebar.classList.toggle("active");
+// //   toggleBtn.style.display = "none"
+// });
+
+document.addEventListener("click", (e) => {
+    if(e.target.classList.contains("hamburger")){
+        sidebar.classList.toggle("active");
+    }
+  
+//   toggleBtn.style.display = "none"
 });
 
 // Highlight active link
@@ -17,10 +25,13 @@ links1.forEach(link1 => {
   });
 });
 
+
+
 closeBtn.addEventListener("click", ()=>{
   sidebar.classList.toggle("active");
-  toggleBtn.style.display = "block";
+//   toggleBtn.style.display = "block";
 })
+
 
 // ======Loader===============================================
 

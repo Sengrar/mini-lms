@@ -50,5 +50,7 @@ const observer = new IntersectionObserver(entries => {
   }
 }, { threshold: 0.4 });
 
-observer.observe(document.querySelector('.impact-stats'));
+const target = document.querySelector(".count");
+if (target) {observer.observe(target);}
+
 

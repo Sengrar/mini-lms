@@ -9,7 +9,11 @@
   <title>Mini LMS | Page Title</title>
 
   <!-- Global CSS -->
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
 
   <!-- Page Specific CSS -->
   <!-- <link rel="stylesheet" href="css/page.css"> -->
@@ -23,10 +27,33 @@
 
   <!-- Main Content -->
   <main>
-    <section class="page-section">
-      <h1>Page Heading</h1>
-      <p>This is a sample content section for the page.</p>
-    </section>
+    <section class="auth-container">
+  <div class="auth-box">
+
+    <div class="auth-tabs">
+      <button id="loginTab" class="active">Login</button>
+      <button id="signupTab">Sign Up</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <form id="loginForm" class="auth-form active">
+      <input type="email" id="loginEmail" placeholder="Email" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- SIGNUP FORM -->
+    <form id="signupForm" class="auth-form">
+      <input type="text" id="firstName" placeholder="First Name" required />
+      <input type="text" id="lastName" placeholder="Last Name" required />
+      <input type="email" id="signupEmail" placeholder="Email" required />
+      <input type="password" id="signupPassword" placeholder="Password" required />
+      <button type="submit">Create Account</button>
+    </form>
+
+  </div>
+</section>
+
   </main>
 
   <!-- Footer -->
@@ -35,7 +62,8 @@
   </footer>
 
   <!-- Global JS -->
-  <script src="js/main.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/navbar.js"></script>
 
   <!-- Page Specific JS -->
   <!-- <script src="js/page.js"></script> -->

@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar</title>
-    <link rel="stylesheet" href="/css/sidebar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar</title>
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-    <!-- Sidebar -->
-<div id="sidebar" class="sidebar">
-  <div class="search-box">
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <!-- <div class="search-box">
     <input type="text" placeholder="Search...">
+  </div> -->
+
+
+
+    <div class="top-actions">
+      <button class="closeBtn">X</button>
+      <button id="themeToggle">🌙</button>
+      <img src="https://i.pravatar.cc/40">
+    </div>
+
+    <ul>
+      <li><a class="active" href="/dashboard.html"><i class="fa fa-home"></i> Dashboard</a></li>
+      <li><a href="#"><i class="fa fa-book"></i> My Courses</a></li>
+      <li><a href="#"><i class="fa fa-tasks"></i> Assignments</a></li>
+      <li><a href="#"><i class="fa fa-award"></i> Certificates</a></li>
+      <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+      <li><a href="#logout"><i class="fas fa-power-off"></i> Logout</a></li>
+    </ul>
   </div>
-  <ul>
-    <li><a href="#dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
-    <li><a href="#revenue"><i class="fas fa-chart-bar"></i> Revenue</a></li>
-    <li><a href="#notifications"><i class="fas fa-bell"></i> Notifications</a></li>
-    <li><a href="#analytics"><i class="fas fa-clock"></i> Analytics</a></li>
-    <li><a href="#likes"><i class="fas fa-heart"></i> Likes</a></li>
-    <li><a href="#wallets"><i class="fas fa-wallet"></i> Wallets</a></li>
-    <li><a href="#logout"><i class="fas fa-power-off"></i> Logout</a></li>
-  </ul>
-</div>
-<div class="sidebar" id="sidebar">
-  <button id="closeBtn">X</button>
-  <!-- sidebar content -->
-</div>
+  <div class="sidebar" id="sidebar">
+    <!-- <button id="closeBtn">X</button> -->
+    <!-- sidebar content -->
+  </div>
 
-<div id="content" style="display:none;">
-  <!-- Your sidebar + page content goes here -->
-</div>
+  <div id="content" style="display:none;">
+    <!-- Your sidebar + page content goes here -->
+  </div>
 
-<!-- Toggle Button -->
-<button id="toggle-btn">☰</button>
-<div id="loader">
+  <!-- Toggle Button -->
+  <button id="toggle-btn">☰</button>
+
+
+  <!-- <div id="loader">
   <div class="spinner"></div>
-</div>
+</div> -->
 
-<script src="/js/sidebar.js"></script>
+  <script src="/js/sidebar.js"></script>
 </body>
+
 </html>

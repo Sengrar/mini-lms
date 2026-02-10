@@ -10,9 +10,9 @@ const nameFields = document.getElementById("nameFields");
 
 let isLogin = true;
 
-/* ---------- SESSION CHECK ON PAGE LOAD ---------- */
-if (localStorage.getItem("loggedIn") === "true") {
-  console.log("User already logged in");
+/* ---------- SESSION CHECK ---------- */
+if (localStorage.getItem("currentUser")) {
+  window.location.href = "/dashboard.html";
 }
 
 /* ---------- SHOW / HIDE PASSWORD ---------- */
@@ -25,14 +25,14 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   if (!isLogin) {
-    if (firstName.value === "" || lastName.value === "") {
-      alert("Please enter first and last name");
+    if (!firstName.value || !lastName.value) {
+      alert("Enter full name");
       return;
     }
   }
 
-  if (email.value === "" || password.value === "") {
-    alert("Please fill all fields");
+  if (!email.value || !password.value) {
+    alert("Fill all fields");
     return;
   }
 
@@ -42,7 +42,7 @@ form.addEventListener("submit", (e) => {
   }
 
   if (password.value.length < 6) {
-    alert("Password must be at least 6 characters");
+    alert("Password must be 6+ characters");
     return;
   }
 
@@ -54,39 +54,51 @@ function validateEmail(mail) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail);
 }
 
-/* ---------- REGISTER ---------- */
+/* ---------- REGISTER (MULTI USER) ---------- */
 function registerUser() {
-  const user = {
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+
+  if (users.find(u => u.email === email.value)) {
+    alert("Account already exists");
+    return;
+  }
+
+  const newUser = {
+    id: Date.now(),
     firstName: firstName.value,
     lastName: lastName.value,
     email: email.value,
     password: password.value
   };
 
-  localStorage.setItem("user", JSON.stringify(user));
-  localStorage.setItem("loggedIn", "true");
+  users.push(newUser);
+
+  localStorage.setItem("users", JSON.stringify(users));
+  localStorage.setItem("currentUser", JSON.stringify(newUser));
 
   alert("Signup successful!");
+
+  window.location.href = "/dashboard.html";
 }
 
 /* ---------- LOGIN ---------- */
 function loginUser() {
-  const storedUser = JSON.parse(localStorage.getItem("user"));
+  let users = JSON.parse(localStorage.getItem("users")) || [];
 
-  if (!storedUser) {
-    alert("No account found. Please sign up.");
+  const user = users.find(
+    u => u.email === email.value && u.password === password.value
+  );
+
+  if (!user) {
+    alert("Invalid credentials");
     return;
   }
 
-  if (
-    email.value === storedUser.email &&
-    password.value === storedUser.password
-  ) {
-    localStorage.setItem("loggedIn", "true");
-    alert("Login successful!");
-  } else {
-    alert("Invalid credentials");
-  }
+  localStorage.setItem("currentUser", JSON.stringify(user));
+
+  alert("Login successful!");
+
+  window.location.href = "/dashboard.html";
 }
 
 /* ---------- SWITCH LOGIN / SIGNUP ---------- */

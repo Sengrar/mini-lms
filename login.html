@@ -42,28 +42,19 @@
       <div class="divider">or</div>
 
       <!-- AUTH FORM -->
-      <form id="authForm">
+      <form id="loginForm">
 
         <!-- SIGNUP  -->
-        <div id="nameFields" style="display: none;">
-          <input type="text" id="firstName" placeholder="First Name" required/>
-          <input type="text" id="lastName" placeholder="Last Name" required/>
-        </div>
+        <input type="email" id="email" placeholder="Email" required>
+        <!-- <br><br> -->
 
-        <input type="email" id="email" placeholder="Email" required/>
+        <input type="password" id="password" placeholder="Password" required>
+        <!-- <br><br> -->
 
-        <div class="password-box">
-          <input type="password" id="password" placeholder="Password" required/>
-          <span id="togglePassword"></span>
-        </div>
-
-        <button type="submit">Continue</button>
+        <button type="submit">Login</button>
       </form>
 
-      <p class="switch">
-        Don’t have an account?
-        <span id="switchAuth">Sign up</span>
-      </p>
+      <p class="switch">Don't have an account? <a href="/register.html">Signup</a></p>
     </div>
   </section>
   <!-- Footer -->
@@ -73,7 +64,7 @@
 
   <!-- Global JS -->
   <script src="/js/main.js"></script>
-  <script src="/js/auth.js"></script>
+  <script src="/js/login.js"></script>
   <script src="/js/navbar.js"></script>
 
   <!-- Page Specific JS -->

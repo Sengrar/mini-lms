@@ -200,7 +200,7 @@ body{
 }
 
 .course img{
-    width:180px;
+    width:70px;
     border-radius:12px;
 }
 
@@ -215,6 +215,10 @@ body{
     height:100%;
     background:var(--accent);
 }
+
+/* .course-card{
+    background-color: aqua;
+} */
 
 /* MOBILE */
 

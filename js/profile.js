@@ -1,42 +1,46 @@
-function initProfilePage() {
+function initProfilePage(){
 
-    const userData = localStorage.getItem("currentUser");
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-    if (!userData) {
-        alert("Please login first");
-        window.location.href = "login.html";
+    if(!currentUser){
+        window.location.href = "/login.html";
         return;
     }
 
-    const user = JSON.parse(userData);
-
     // Fill Inputs
-    document.getElementById("firstName").value = user.firstName || "";
-    document.getElementById("lastName").value = user.lastName || "";
-    document.getElementById("email").value = user.email || "";
+    document.getElementById("firstName").value = currentUser.firstName || "";
+    document.getElementById("lastName").value = currentUser.lastName || "";
+    document.getElementById("email").value = currentUser.email || "";
 
-    // Update Profile
-    document.getElementById("profileForm").addEventListener("submit", function (e) {
+
+    // UPDATE PROFILE
+    document.getElementById("profileForm").addEventListener("submit", function(e){
         e.preventDefault();
 
-        user.firstName = document.getElementById("firstName").value;
-        user.lastName = document.getElementById("lastName").value;
-        user.email = document.getElementById("email").value;
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+
+        currentUser.firstName = document.getElementById("firstName").value;
+        currentUser.lastName = document.getElementById("lastName").value;
+        currentUser.email = document.getElementById("email").value;
 
         const newPass = document.getElementById("password").value;
-        if (newPass.trim() !== "") {
-            user.password = newPass;
+        if(newPass){
+            currentUser.password = newPass;
         }
 
-        localStorage.setItem("currentUser", JSON.stringify(user));
+        users = users.map(u => u.id === currentUser.id ? currentUser : u);
 
-        alert("Profile Updated Successfully");
+        localStorage.setItem("users", JSON.stringify(users));
+        localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+        alert("Profile Updated");
     });
 
-    // Logout
-    document.getElementById("logoutBtn").addEventListener("click", function () {
+
+    // LOGOUT
+    document.getElementById("logoutBtn").addEventListener("click", () => {
         localStorage.removeItem("currentUser");
-        window.location.href = "login.html";
+        window.location.href = "/login.html";
     });
-}
 
+}

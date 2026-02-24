@@ -1,5 +1,5 @@
 # Mini LMS
-
+[**Please switch to DEVELOP Branch, currently code is not pushed in MAIN Branch]
 ## Frontend Learning Management System
 
 Mini LMS is a **frontend-only Learning Management System** built using **HTML, CSS, and Vanilla JavaScript**. The project is designed to simulate a **real-world LMS platform** (inspired by platforms like CodeWithHarry) while following **industry-level collaboration practices using GitHub**.
